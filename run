@@ -30,7 +30,7 @@ function onexit {
 
 
 cd $(dirname "$0")
-source lib/install.sh
+source lib/install
 
 eval "$@"
 
