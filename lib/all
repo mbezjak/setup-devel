@@ -1,4 +1,12 @@
 function install-all {
+    package-refresh
+    setup-dirs
+
     package-install wget
     package-install curl
+    package-install git
+    package-install mercurial
+
+    install-napalm
+    install-poly-devel
 }

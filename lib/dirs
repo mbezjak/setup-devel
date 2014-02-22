@@ -1,0 +1,3 @@
+function setup-dirs {
+    mkdir -p ~/workspace
+}

@@ -1,0 +1,15 @@
+function install-napalm {
+    curl -sL http://git.io/SMnZVQ | bash -s - -y
+    source ~/.napalm/profile
+}
+
+function install-poly-devel {
+    napalm install polydevel latest
+
+    if [[ ! -d ~/workspace/poly-devel ]]; then
+        git clone git@github.com:mbezjak/poly-devel.git ~/workspace/poly-devel
+    fi
+
+    rm -r $NAPALM_PROGRAMS_DIR/polydevel-latest
+    ln -s ~/workspace/poly-devel $NAPALM_PROGRAMS_DIR/polydevel-latest
+}
