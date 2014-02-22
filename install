@@ -31,8 +31,15 @@ function onexit {
 
 cd $(dirname "$0")
 source lib/install
+source lib/all
 
-eval "$@"
+
+if [[ "$1" == run ]]; then
+    shift
+    eval "$@"
+else
+    install-all
+fi
 
 msg OK
 exit 0

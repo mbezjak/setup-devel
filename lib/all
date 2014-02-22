@@ -1,0 +1,4 @@
+function install-all {
+    package-install wget
+    package-install curl
+}
